@@ -1,0 +1,666 @@
+***********************************************************************************************
+***                                                                                         ***
+***                                   LINK INFORMATION                                    ***
+***                                                                                         ***
+***********************************************************************************************
+
+Linker version:
+
+  SEGGER RISC-V Linker 4.44d compiled Jun 20 2026 10:30:01
+  Copyright (c) 2017-2025 SEGGER Microcontroller GmbH    www.segger.com
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                    MODULE SUMMARY                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory use by input file:
+
+  Object File                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  board.c.o                                             262          16                       4
+  gpio.c.o                                                2                                    
+  hpm_bootheader.c.o                                                144                        
+  hpm_l1c_drv.c.o                                       132                                    
+  reset.c.o                                             194                                    
+  startup.s.o                                            88         292                        
+  system.c.o                                            128                                    
+  trap.c.o                                              416          64                        
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (8 objects)                                1 222         516                       4
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  heapops_basic_rv32imac_balanced.a                      18                                   4
+  SEGGER_RV32_crtinit_rv32imac_balanced.a                68                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (2 archives)                                  86                                   4
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Linker created (shared data, fills, blocks):                      900                  32 768
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              1 308       1 416                  32 776
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by archive member:
+
+  Archive member                                    RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+                                                         18                                   4
+  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+                                                         68                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (2 members from 2 archives)                   86                                   4
+  Objects (8 files)                                   1 222         516                       4
+  Linker created (shared data, fills, blocks):                      900                  32 768
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              1 308       1 416                  32 776
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by linker:
+
+  Description                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Initialization table                                              900                        
+  Memory for block 'heap'                                                                16 384
+  Memory for block 'stack'                                                               16 384
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (linker created):                                        900                  32 768
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Objects (8 files)                                   1 222         516                       4
+  Archives (2 files)                                     86                                   4
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              1 308       1 416                  32 776
+  =============================================  ==========  ==========  ==========  ==========
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                    SECTION DETAIL                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Sections by address:
+
+  Range              Symbol or [section] Name         Size  Al  Init  Ac  Object File
+  -----------------  -------------------------  ----------  --  ----  --  -----------
+  00000000-00000123  __vector_table                    292  512
+                                                                Init  RO  startup.s.o
+  00000124-0000027D  irq_handler_trap                  346   4  Init  RX  trap.c.o
+  0000027E-0000027F  ( ALIGN .=.+2 )                     2   -  ----  -   -
+  00000280-00000283  nmi_handler                         4   4  Init  RX  startup.s.o
+  00000284-00000351  board_timer_isr                   206   4  Init  RX  board.c.o
+  00000352-00000353  ( ALIGN .=.+2 )                     2   -  ----  -   -
+  00000354-000802FF  ( UNUSED .=.+524204 )         524 204   -  ----  -   -
+  00080300-00080303  timer_cb                            4   4  Zero  ZI  board.c.o
+  00080304-00080307  __SEGGER_RTL_heap_globals.0
+                                                         4   4  Zero  ZI  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  00080308-00084307  [.bss.block.heap]              16 384   8  None  ZI  [ Linker created ]
+  00084308-0009BFFF  ( UNUSED .=.+97528 )           97 528   -  ----  -   -
+  0009C000-0009FFFF  [.bss.block.stack]             16 384  16  None  ZI  [ Linker created ]
+  80000400-8000040F  option                             16   4  Cnst  RO  board.c.o
+  80000410-80000FFF  ( UNUSED .=.+3056 )             3 056   -  ----  -   -
+  80001000-8000100F  header                             16   4  Cnst  RO  hpm_bootheader.c.o
+  80001010-8000108F  fw_info                           128   4  Cnst  RO  hpm_bootheader.c.o
+  80001090-80002FFF  ( UNUSED .=.+8048 )             8 048   -  ----  -   -
+  80003000-80003053  _start                             84   2  Code  RX  startup.s.o
+  80003054-80003093  [.rodata.exception_handler]
+                                                        64   4  Cnst  RO  trap.c.o
+  80003094-80003095  main                                2   2  Code  RX  gpio.c.o
+  80003096-8000313F  _clean_up                         170   2  Code  RX  reset.c.o
+  80003140-80003151  syscall_handler                    18   2  Code  RX  trap.c.o
+  80003152-800031A5  system_init                        84   2  Code  RX  system.c.o
+  800031A6-800031D9  l1c_dc_enable                      52   2  Code  RX  hpm_l1c_drv.c.o
+  800031DA-80003207  l1c_ic_enable                      46   2  Code  RX  hpm_l1c_drv.c.o
+  80003208-80003211  l1c_dc_enable_writearound          10   2  Code  RX  hpm_l1c_drv.c.o
+  80003212-80003225  __SEGGER_init_heap                 20   2  Code  RX  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  80003226-80003237  __SEGGER_RTL_init_heap             18   2  Code  RX  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  80003238-8000324B  reset_handler                      20   2  Code  RX  reset.c.o
+  8000324C-8000324F  _init                               4   2  Code  RX  reset.c.o
+  80003250-80003253  mchtmr_isr                          4   2  Code  RX  trap.c.o
+  80003254-80003257  swi_isr                             4   2  Code  RX  trap.c.o
+  80003258-80003283  exception_handler                  44   2  Code  RX  trap.c.o
+  80003284-800032AF  enable_plic_feature                44   2  Code  RX  system.c.o
+  800032B0-800032C7  l1c_dc_invalidate_all              24   2  Code  RX  hpm_l1c_drv.c.o
+  800032C8-800032EB  gptmr_check_status                 36   2  Code  RX  board.c.o
+  800032EC-800032FF  gptmr_clear_status                 20   2  Code  RX  board.c.o
+  80003300-80003333  __SEGGER_init_table__              52   4  Cnst  RO  [ Linker created ]
+  80003334-80003683  __SEGGER_init_data__              848   4  Cnst  RO  [ Linker created ]
+  80003684-80003697  __SEGGER_init_zero                 20   2  Code  RX  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  80003698-800036B3  __SEGGER_init_copy                 28   2  Code  RX  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                      SYMBOL LIST                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+RAM function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  board_timer_isr            0x00000284          54      4  Init  Gb  board.c.o
+  default_isr_8              0x000002B6         158      4  Init  Gb  board.c.o
+  irq_handler_trap           0x00000124         344      4  Init  Gb  trap.c.o
+
+RAM function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000124  irq_handler_trap                  344      4  Init  Gb  trap.c.o
+  0x00000284  board_timer_isr                    54      4  Init  Gb  board.c.o
+  0x000002B6  default_isr_8                     158      4  Init  Gb  board.c.o
+
+RAM function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  irq_handler_trap                  344      4  Init  Gb  trap.c.o
+  default_isr_8                     158      4  Init  Gb  board.c.o
+  board_timer_isr                    54      4  Init  Gb  board.c.o
+
+Function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  __SEGGER_RTL_init_heap     0x80003226          22      2  Code  Wk  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  __SEGGER_init_copy         0x80003698          28      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  __SEGGER_init_done         0x80003038                  2  Code  Gb  startup.s.o
+  __SEGGER_init_heap         0x80003212          26      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  __SEGGER_init_zero         0x80003684          20      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  _clean_up                  0x80003096         170      2  Code  Wk  reset.c.o
+  _init                      0x8000324C           4      2  Code  Wk  reset.c.o
+  _start                     0x80003000         142      2  Code  Gb  startup.s.o
+  enable_plic_feature        0x80003284          44      2  Code  Gb  system.c.o
+  exception_handler          0x80003258          44      2  Code  Wk  trap.c.o
+  exit                       0x8000304A           2      2  Code  Gb  startup.s.o
+  gptmr_check_status         0x800032C8          36      2  Code  Lc  board.c.o
+  gptmr_clear_status         0x800032EC          20      2  Code  Lc  board.c.o
+  l1c_dc_enable              0x800031A6          58      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_dc_enable_writearound  0x80003208          10      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_dc_invalidate_all      0x800032B0          24      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_ic_enable              0x800031DA          46      2  Code  Gb  hpm_l1c_drv.c.o
+  main                       0x80003094           2      2  Code  Gb  gpio.c.o
+  mchtmr_isr                 0x80003250           4      2  Code  Wk  trap.c.o
+  reset_handler              0x80003238          32      2  Code  Wk  reset.c.o
+  start                      0x80003046                  2  Code  Gb  startup.s.o
+  swi_isr                    0x80003254           4      2  Code  Wk  trap.c.o
+  syscall_handler            0x80003140          18      2  Code  Wk  trap.c.o
+  system_init                0x80003152          90      2  Code  Wk  system.c.o
+
+Function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x80003000  _start                            142      2  Code  Gb  startup.s.o
+  0x80003038  __SEGGER_init_done                         2  Code  Gb  startup.s.o
+  0x80003046  start                                      2  Code  Gb  startup.s.o
+  0x8000304A  exit                                2      2  Code  Gb  startup.s.o
+  0x80003094  main                                2      2  Code  Gb  gpio.c.o
+  0x80003096  _clean_up                         170      2  Code  Wk  reset.c.o
+  0x80003140  syscall_handler                    18      2  Code  Wk  trap.c.o
+  0x80003152  system_init                        90      2  Code  Wk  system.c.o
+  0x800031A6  l1c_dc_enable                      58      2  Code  Gb  hpm_l1c_drv.c.o
+  0x800031DA  l1c_ic_enable                      46      2  Code  Gb  hpm_l1c_drv.c.o
+  0x80003208  l1c_dc_enable_writearound          10      2  Code  Gb  hpm_l1c_drv.c.o
+  0x80003212  __SEGGER_init_heap                 26      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  0x80003226  __SEGGER_RTL_init_heap             22      2  Code  Wk  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  0x80003238  reset_handler                      32      2  Code  Wk  reset.c.o
+  0x8000324C  _init                               4      2  Code  Wk  reset.c.o
+  0x80003250  mchtmr_isr                          4      2  Code  Wk  trap.c.o
+  0x80003254  swi_isr                             4      2  Code  Wk  trap.c.o
+  0x80003258  exception_handler                  44      2  Code  Wk  trap.c.o
+  0x80003284  enable_plic_feature                44      2  Code  Gb  system.c.o
+  0x800032B0  l1c_dc_invalidate_all              24      2  Code  Gb  hpm_l1c_drv.c.o
+  0x800032C8  gptmr_check_status                 36      2  Code  Lc  board.c.o
+  0x800032EC  gptmr_clear_status                 20      2  Code  Lc  board.c.o
+  0x80003684  __SEGGER_init_zero                 20      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  0x80003698  __SEGGER_init_copy                 28      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+
+Function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  _clean_up                         170      2  Code  Wk  reset.c.o
+  _start                            142      2  Code  Gb  startup.s.o
+  system_init                        90      2  Code  Wk  system.c.o
+  l1c_dc_enable                      58      2  Code  Gb  hpm_l1c_drv.c.o
+  l1c_ic_enable                      46      2  Code  Gb  hpm_l1c_drv.c.o
+  enable_plic_feature                44      2  Code  Gb  system.c.o
+  exception_handler                  44      2  Code  Wk  trap.c.o
+  gptmr_check_status                 36      2  Code  Lc  board.c.o
+  reset_handler                      32      2  Code  Wk  reset.c.o
+  __SEGGER_init_copy                 28      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  __SEGGER_init_heap                 26      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  l1c_dc_invalidate_all              24      2  Code  Gb  hpm_l1c_drv.c.o
+  __SEGGER_RTL_init_heap             22      2  Code  Wk  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  __SEGGER_init_zero                 20      2  Code  Wk  SEGGER_RV32_crtinit.o (SEGGER_RV32_crtinit_rv32imac_balanced.a)
+  gptmr_clear_status                 20      2  Code  Lc  board.c.o
+  syscall_handler                    18      2  Code  Wk  trap.c.o
+  l1c_dc_enable_writearound          10      2  Code  Gb  hpm_l1c_drv.c.o
+  _init                               4      2  Code  Wk  reset.c.o
+  mchtmr_isr                          4      2  Code  Wk  trap.c.o
+  swi_isr                             4      2  Code  Wk  trap.c.o
+  exit                                2      2  Code  Gb  startup.s.o
+  main                                2      2  Code  Gb  gpio.c.o
+  __SEGGER_init_done                         2  Code  Gb  startup.s.o
+  start                                      2  Code  Gb  startup.s.o
+
+Read-write data symbols by name:
+
+  Global base (gp) at 0x00000800
+  Thread base (tp) at 0x00080B00
+  
+  Symbol name                   Address     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __SEGGER_RTL_heap_globals.0
+                             0x00080304  tp-0x07FC           4      4  Zero  Lc  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  timer_cb                   0x00080300  tp-0x0800           4      4  Zero  Lc  board.c.o
+
+Read-write data symbols by address:
+
+  Global base (gp) at 0x00000800
+  Thread base (tp) at 0x00080B00
+  
+     Address     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x00080300  tp-0x0800  timer_cb                            4      4  Zero  Lc  board.c.o
+  0x00080304  tp-0x07FC  __SEGGER_RTL_heap_globals.0
+                                                             4      4  Zero  Lc  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+
+Read-write data symbols by descending size:
+
+  Global base (gp) at 0x00000800
+  Thread base (tp) at 0x00080B00
+  
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  __SEGGER_RTL_heap_globals.0
+                                      4      4  Zero  Lc  heapops_basic.o (heapops_basic_rv32imac_balanced.a)
+  timer_cb                            4      4  Zero  Lc  board.c.o
+
+Read-only data symbols by name:
+
+  Symbol name                   Address     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __SEGGER_init_data__       0x80003334                  [848]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_table__      0x80003300                   [52]      4  Cnst  Lc  [ Linker created ]
+  fw_info                    0x80001010                    128      4  Cnst  Gb  hpm_bootheader.c.o
+  header                     0x80001000                     16      4  Cnst  Gb  hpm_bootheader.c.o
+  option                     0x80000400                     16      4  Cnst  Gb  board.c.o
+
+Read-only data symbols by address:
+
+     Address     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x80000400             option                             16      4  Cnst  Gb  board.c.o
+  0x80001000             header                             16      4  Cnst  Gb  hpm_bootheader.c.o
+  0x80001010             fw_info                           128      4  Cnst  Gb  hpm_bootheader.c.o
+  0x80003300             __SEGGER_init_table__            [52]      4  Cnst  Lc  [ Linker created ]
+  0x80003334             __SEGGER_init_data__            [848]      4  Cnst  Lc  [ Linker created ]
+
+Untyped symbols by name:
+
+  Global base (gp) at 0x00000800
+  Thread base (tp) at 0x00080B00
+  
+  Symbol name                     Value     Access        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ---------  ----------  -----  ----  --  -----------
+  __AHB_SRAM_segment_end__   0xF0408000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_size__  0x00008000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_start__
+                             0xF0400000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_used_end__
+                             0xF0400000                                ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_used_size__
+                             0x00000000  gp-0x0800                     ----  Gb  [ Linker created ]
+  __AHB_SRAM_segment_used_start__
+                             0xF0400000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_end__
+                             0x80003000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_size__
+                             0x00002000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_start__
+                             0x80001000                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_used_end__
+                             0x80001090                                ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_used_size__
+                             0x00000090  gp-0x0770                     ----  Gb  [ Linker created ]
+  __BOOT_HEADER_segment_used_start__
+                             0x80001000                                ----  Gb  [ Linker created ]
+  __DLM_segment_end__        0x000A0000                                ----  Gb  [ Linker created ]
+  __DLM_segment_size__       0x0001FD00                                ----  Gb  [ Linker created ]
+  __DLM_segment_start__      0x00080300  tp-0x0800                     ----  Gb  [ Linker created ]
+  __DLM_segment_used_end__   0x000A0000                                ----  Gb  [ Linker created ]
+  __DLM_segment_used_size__  0x0001FD00                                ----  Gb  [ Linker created ]
+  __DLM_segment_used_start__
+                             0x00080300  tp-0x0800                     ----  Gb  [ Linker created ]
+  __FLASH_segment_end__      0x80100000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_size__     0x000FD000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_start__    0x80003000                                ----  Gb  [ Linker created ]
+  __FLASH_segment_used_end__
+                             0x800036B4                                ----  Gb  [ Linker created ]
+  __FLASH_segment_used_size__
+                             0x000006B4  gp-0x014C                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_start__
+                             0x80003000                                ----  Gb  [ Linker created ]
+  __HEAPSIZE__               0x00004000                                ----  Gb  [ Linker created ]
+  __ILM_segment_end__        0x00020000                                ----  Gb  [ Linker created ]
+  __ILM_segment_size__       0x00020000                                ----  Gb  [ Linker created ]
+  __ILM_segment_start__      0x00000000  gp-0x0800                     ----  Gb  [ Linker created ]
+  __ILM_segment_used_end__   0x00000352  gp-0x04AE                     ----  Gb  [ Linker created ]
+  __ILM_segment_used_size__  0x00000352  gp-0x04AE                     ----  Gb  [ Linker created ]
+  __ILM_segment_used_start__
+                             0x00000000  gp-0x0800                     ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_end__
+                             0x80001000                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_size__
+                             0x00000C00  gp+0x0400                     ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_start__
+                             0x80000400                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_used_end__
+                             0x80000410                                ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_used_size__
+                             0x00000010  gp-0x07F0                     ----  Gb  [ Linker created ]
+  __NOR_CFG_OPTION_segment_used_start__
+                             0x80000400                                ----  Gb  [ Linker created ]
+  __STACKSIZE__              0x00004000                                ----  Gb  [ Linker created ]
+  __app_load_addr__          0x80003000                                ----  Gb  [ Linker created ]
+  __app_offset__             0x00002000                                ----  Gb  [ Linker created ]
+  __boot_header_length__     0x00000090  gp-0x0770                     ----  Gb  [ Linker created ]
+  __boot_header_load_addr__  0x80001000                                ----  Gb  [ Linker created ]
+  __fsymtab_end              0x80003300                                ----  Gb  [ Linker created ]
+  __fsymtab_start            0x80003300                                ----  Gb  [ Linker created ]
+  __global_pointer$          0x00000800  gp+0x0000                     ----  Gb  [ Linker created ]
+  __heap_end__               0x00084308                                ----  Gb  [ Linker created ]
+  __heap_start__             0x00080308  tp-0x07F8                     ----  Gb  [ Linker created ]
+  __nor_cfg_option_load_addr__
+                             0x80000400                                ----  Gb  [ Linker created ]
+  __rt_init_end              0x80003300                                ----  Gb  [ Linker created ]
+  __rt_init_start            0x80003300                                ----  Gb  [ Linker created ]
+  __rtmsymtab_end            0x80003300                                ----  Gb  [ Linker created ]
+  __rtmsymtab_start          0x80003300                                ----  Gb  [ Linker created ]
+  __stack_end__              0x000A0000                                ----  Gb  [ Linker created ]
+  __startup_complete         0x80003046                             2  Code  Lc  startup.s.o
+  __thread_pointer$          0x00080B00  tp+0x0000                     ----  Gb  [ Linker created ]
+  __usbh_class_info_end__    0x80003058                                ----  Gb  [ Linker created ]
+  __usbh_class_info_start__  0x80003058                                ----  Gb  [ Linker created ]
+  __vector_table             0x00000000  gp-0x0800       [292]    512  Init  Gb  startup.s.o
+  __vsymtab_end              0x80003300                                ----  Gb  [ Linker created ]
+  __vsymtab_start            0x80003300                                ----  Gb  [ Linker created ]
+  _flash_size                0x00100000                                ----  Gb  [ Linker created ]
+  _heap_size                 0x00004000                                ----  Gb  [ Linker created ]
+  _stack                     0x000A0000                                ----  Gb  [ Linker created ]
+  _stack_safe                0x000A0000                                ----  Gb  [ Linker created ]
+  _stack_size                0x00004000                                ----  Gb  [ Linker created ]
+  default_irq_handler        0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_1              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_10             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_11             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_12             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_13             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_14             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_15             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_16             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_17             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_18             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_19             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_2              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_20             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_21             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_22             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_23             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_24             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_25             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_26             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_27             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_28             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_29             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_3              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_30             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_31             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_32             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_33             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_34             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_35             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_36             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_37             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_38             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_39             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_4              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_40             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_41             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_42             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_43             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_44             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_45             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_46             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_47             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_48             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_49             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_5              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_50             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_51             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_52             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_53             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_54             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_55             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_56             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_57             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_58             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_59             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_6              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_60             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_61             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_62             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_63             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_64             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_65             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_66             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_67             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_68             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_69             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_7              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_70             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_71             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_72             0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_8              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  default_isr_9              0x00000282  gp-0x057E                  4  Init  Wk  startup.s.o
+  nmi_handler                0x00000280  gp-0x0580         [4]      4  Init  Wk  startup.s.o
+
+Untyped symbols by address:
+
+  Global base (gp) at 0x00000800
+  Thread base (tp) at 0x00080B00
+  
+       Value     Access  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  ---------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000000  gp-0x0800  __vector_table                  [292]    512  Init  Gb  startup.s.o
+  0x00000000  gp-0x0800  __ILM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000000  gp-0x0800  __ILM_segment_start__                         ----  Gb  [ Linker created ]
+  0x00000000  gp-0x0800  __AHB_SRAM_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000010  gp-0x07F0  __NOR_CFG_OPTION_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000090  gp-0x0770  __boot_header_length__                        ----  Gb  [ Linker created ]
+  0x00000090  gp-0x0770  __BOOT_HEADER_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000280  gp-0x0580  nmi_handler                       [4]      4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_9                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_8                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_72                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_71                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_70                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_7                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_69                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_68                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_67                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_66                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_65                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_64                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_63                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_62                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_61                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_60                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_6                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_59                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_58                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_57                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_56                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_55                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_54                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_53                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_52                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_51                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_50                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_5                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_49                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_48                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_47                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_46                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_45                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_44                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_43                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_42                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_41                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_40                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_4                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_39                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_38                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_37                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_36                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_35                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_34                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_33                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_32                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_31                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_30                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_3                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_29                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_28                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_27                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_26                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_25                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_24                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_23                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_22                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_21                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_20                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_2                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_19                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_18                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_17                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_16                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_15                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_14                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_13                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_12                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_11                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_10                             4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_isr_1                              4  Init  Wk  startup.s.o
+  0x00000282  gp-0x057E  default_irq_handler                        4  Init  Wk  startup.s.o
+  0x00000352  gp-0x04AE  __ILM_segment_used_size__                     ----  Gb  [ Linker created ]
+  0x00000352  gp-0x04AE  __ILM_segment_used_end__                      ----  Gb  [ Linker created ]
+  0x000006B4  gp-0x014C  __FLASH_segment_used_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00000800  gp+0x0000  __global_pointer$                             ----  Gb  [ Linker created ]
+  0x00000C00  gp+0x0400  __NOR_CFG_OPTION_segment_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00002000             __app_offset__                                ----  Gb  [ Linker created ]
+  0x00002000             __BOOT_HEADER_segment_size__
+                                                                       ----  Gb  [ Linker created ]
+  0x00004000             _stack_size                                   ----  Gb  [ Linker created ]
+  0x00004000             _heap_size                                    ----  Gb  [ Linker created ]
+  0x00004000             __STACKSIZE__                                 ----  Gb  [ Linker created ]
+  0x00004000             __HEAPSIZE__                                  ----  Gb  [ Linker created ]
+  0x00008000             __AHB_SRAM_segment_size__                     ----  Gb  [ Linker created ]
+  0x0001FD00             __DLM_segment_used_size__                     ----  Gb  [ Linker created ]
+  0x0001FD00             __DLM_segment_size__                          ----  Gb  [ Linker created ]
+  0x00020000             __ILM_segment_size__                          ----  Gb  [ Linker created ]
+  0x00020000             __ILM_segment_end__                           ----  Gb  [ Linker created ]
+  0x00080300  tp-0x0800  __DLM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x00080300  tp-0x0800  __DLM_segment_start__                         ----  Gb  [ Linker created ]
+  0x00080308  tp-0x07F8  __heap_start__                                ----  Gb  [ Linker created ]
+  0x00080B00  tp+0x0000  __thread_pointer$                             ----  Gb  [ Linker created ]
+  0x00084308             __heap_end__                                  ----  Gb  [ Linker created ]
+  0x000A0000             _stack_safe                                   ----  Gb  [ Linker created ]
+  0x000A0000             _stack                                        ----  Gb  [ Linker created ]
+  0x000A0000             __stack_end__                                 ----  Gb  [ Linker created ]
+  0x000A0000             __DLM_segment_used_end__                      ----  Gb  [ Linker created ]
+  0x000A0000             __DLM_segment_end__                           ----  Gb  [ Linker created ]
+  0x000FD000             __FLASH_segment_size__                        ----  Gb  [ Linker created ]
+  0x00100000             _flash_size                                   ----  Gb  [ Linker created ]
+  0x80000400             __nor_cfg_option_load_addr__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000400             __NOR_CFG_OPTION_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000400             __NOR_CFG_OPTION_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80000410             __NOR_CFG_OPTION_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001000             __boot_header_load_addr__                     ----  Gb  [ Linker created ]
+  0x80001000             __NOR_CFG_OPTION_segment_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001000             __BOOT_HEADER_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001000             __BOOT_HEADER_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80001090             __BOOT_HEADER_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80003000             __app_load_addr__                             ----  Gb  [ Linker created ]
+  0x80003000             __FLASH_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0x80003000             __FLASH_segment_start__                       ----  Gb  [ Linker created ]
+  0x80003000             __BOOT_HEADER_segment_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80003046             __startup_complete                         2  Code  Lc  startup.s.o
+  0x80003058             __usbh_class_info_start__                     ----  Gb  [ Linker created ]
+  0x80003058             __usbh_class_info_end__                       ----  Gb  [ Linker created ]
+  0x80003300             __vsymtab_start                               ----  Gb  [ Linker created ]
+  0x80003300             __vsymtab_end                                 ----  Gb  [ Linker created ]
+  0x80003300             __rtmsymtab_start                             ----  Gb  [ Linker created ]
+  0x80003300             __rtmsymtab_end                               ----  Gb  [ Linker created ]
+  0x80003300             __rt_init_start                               ----  Gb  [ Linker created ]
+  0x80003300             __rt_init_end                                 ----  Gb  [ Linker created ]
+  0x80003300             __fsymtab_start                               ----  Gb  [ Linker created ]
+  0x80003300             __fsymtab_end                                 ----  Gb  [ Linker created ]
+  0x800036B4             __FLASH_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0x80100000             __FLASH_segment_end__                         ----  Gb  [ Linker created ]
+  0xF0400000             __AHB_SRAM_segment_used_start__
+                                                                       ----  Gb  [ Linker created ]
+  0xF0400000             __AHB_SRAM_segment_used_end__
+                                                                       ----  Gb  [ Linker created ]
+  0xF0400000             __AHB_SRAM_segment_start__
+                                                                       ----  Gb  [ Linker created ]
+  0xF0408000             __AHB_SRAM_segment_end__                      ----  Gb  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     LINK SUMMARY                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory breakdown:
+
+    1 308 bytes read-only  code    + 
+    1 416 bytes read-only  data    =   2 724 bytes read-only (total)
+   32 776 bytes read-write data
+
+Region summary:
+
+  Name        Range                     Size                 Used               Unused       Alignment Loss
+  ----------  -----------------  -----------  -------------------  -------------------  -------------------
+  ILM         00000000-0001FFFF      131 072          848   0.65%      130 222  99.35%            2   0.00%
+  DLM         00080300-0009FFFF      130 304       32 776  25.15%       97 528  74.85%            0   0.00%
+  NOR_CFG_OPTION
+              80000400-80000FFF        3 072           16   0.52%        3 056  99.48%            0   0.00%
+  BOOT_HEADER
+              80001000-80002FFF        8 192          144   1.76%        8 048  98.24%            0   0.00%
+  FLASH       80003000-800FFFFF    1 036 288        1 716   0.17%    1 034 572  99.83%            0   0.00%
+
+Link complete: 0 error.
