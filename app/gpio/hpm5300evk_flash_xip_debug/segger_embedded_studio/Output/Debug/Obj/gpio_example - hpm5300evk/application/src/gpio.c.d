@@ -1,21 +1,27 @@
 Output/Debug/Obj/gpio_example\ -\ hpm5300evk/application/src/gpio.c.o: \
  D:\_HPM5300EVK_Project\sdk_project\app\gpio\src\gpio.c \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_gpio_drv.h \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_common.h \
- D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/assert.h \
+ ../../../../board/hpm5300evk/board.h \
+ D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/stdio.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/__SEGGER_RTL.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/__SEGGER_RTL_ConfDefaults.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/__SEGGER_RTL_Conf.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/__SEGGER_RTL_RISCV_Conf.h \
+ D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/stdarg.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_common.h \
+ D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/assert.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/stdbool.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/stdint.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/string.h \
  D:/1_Sofrware/HPM5300_SoftWare/Segger_Embedded_Studio_ForRISC_V/include/stdlib.h \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_gpio_regs.h \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_feature.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_clock_drv.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_sysctl_drv.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_sysctl_regs.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_csr_drv.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_csr_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/arch/riscv/riscv_core.h \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_common.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_ip.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_gpio_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_plic_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_mchtmr_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_plic_sw_regs.h \
@@ -52,11 +58,26 @@ Output/Debug/Obj/gpio_example\ -\ hpm5300evk/application/src/gpio.c.o: \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_dac_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_opamp_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_acmp_regs.h \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_sysctl_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_ioc_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_pllctlv2_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_ppor_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_pcfg_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_pgpr_regs.h \
  D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/ip/hpm_pdgo_regs.h \
- D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_ip_feature.h
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_irq.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_ip_feature.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_feature.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_csr_regs.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/arch/riscv/intc/hpm_interrupt.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_plic_drv.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_soc_feature.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_misc.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_otp_table.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_dmamux_src.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_trgmmux_src.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_iomux.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/soc/HPM5300/HPM5361/hpm_pmic_iomux.h \
+ ../../../../board/hpm5300evk/pinmux.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/components/debug_console/hpm_debug_console.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_uart_drv.h \
+ D:/1_Sofrware/HPM5300_SoftWare/sdk_env_v1.11.0/sdk_env_v1.11.0/hpm_sdk/drivers/inc/hpm_common.h
